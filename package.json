@@ -1,0 +1,17 @@
+{
+  "name": "Angelhack",
+  "version": "1.0.0",
+  "description": "\"Lending platform\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.3.16",
+    "angular-route": "^1.3.16",
+    "bootstrap": "^3.3.4",
+    "jquery": "^2.1.4"
+  }
+}
