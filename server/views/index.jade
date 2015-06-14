@@ -1,20 +1,23 @@
 extends ../includes/layout
 
 block main-content
-    .navbar.navbar-inverse.navbar-fixed-top
-        .container
-            .navbar-header
-                a.navbar-brand(href="/") AngelHack
-            .navbar-collapse.collapse
-                ul.nav.navbar-nav.hover-active.navbar-right
-                    li
-                        a(href="/") Dashboard
-                    li
-                        a(href="/") History
-                    li
-                        a(href="/") Help
+    .navbar.navbar-default.navbar-fixed-top
+        .navbar-collapse.collapse
+            .row
+                .container
+                    .col-xs-4.pull-right
+                        ul.nav.navbar-nav.hover-active.navbar-right
+                            li
+                                a(href="/") Dashboard
+                            li
+                                a(href="/") History
+                            li
+                                a(href="/") signup
+            .row
                 img.userpic
-                h1(ng-controller='Username') {{username}}
+                span.username(ng-controller='Username') {{username}}
+                .col-xs-3.pull-right
+                    img.navbarlogo(src="partials/../images/robodog.png")
 
     section.content
         div(ng-view)
