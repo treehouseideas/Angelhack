@@ -1,4 +1,4 @@
-myApp.factory('UserService', function($http, $scope, $location) {
+myApp.factory('UserService', function($http, $location) {
     var apiKey = "8bea781f-3916-467d-a48f-c26e56627cb4";
     return {
         createUser : function(email, password) {
