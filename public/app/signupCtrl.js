@@ -1,4 +1,4 @@
-myApp.controller("signupCtrl", function($scope, notifier, $location){
+myApp.controller("signupCtrl", function($scope, notifier, $location, UserService){
 
     $scope.signup = function(){
         UserService.createUser($scope.email,$scope.password).then(function(){
