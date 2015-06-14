@@ -5,19 +5,16 @@ block main-content
         .container
             .navbar-header
                 a.navbar-brand(href="/") AngelHack
-                    h6 -Where's my shit
             .navbar-collapse.collapse
-                ul.nav.navbar-nav.hover-active
+                ul.nav.navbar-nav.hover-active.navbar-right
                     li
-                        a(href="/") Home
+                        a(href="/") Dashboard
                     li
-                        a(href="/") About
+                        a(href="/") History
                     li
-                        a(href="/") Faqs
-                    li
-                        a(href="/mine") mine
-                    li
-                        a(href="/theirs") theirs
+                        a(href="/") Help
+                img.userpic
+                h1(ng-controller='Username') {{username}}
 
     section.content
         div(ng-view)

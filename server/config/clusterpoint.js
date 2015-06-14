@@ -29,11 +29,12 @@ exports.search = function(searchterm, usercount, ascendordescend) {
 };
 
 //insert
-exports.insert = function(id,name) {
-    var insert_request = new cps.InsertRequest('<document><id>' + id + '</id>' + cps.Term(name, "name") + '</document>');
+exports.insert = function(req,res) {
+    var insert_request = new cps.InsertRequest('<document><id>' + req.params.name + '</id>' + cps.Term(req.params.fname + req.params.lname, "name") + '</document>');
     cpsConn.sendRequest(insert_request, function (err, insert_response) {
         if (err) return console.error(err);
         console.log('New user registered: ' + insert_response.document.id);
+        res.send(insert_response.document.id)
     });
 };
 //update

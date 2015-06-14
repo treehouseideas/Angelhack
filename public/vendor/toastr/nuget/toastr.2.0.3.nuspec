@@ -13,7 +13,7 @@
         <description>3 Easy Steps:
 
 (1) Link to toastr.css  
-(2) Link to toastr.js 
+(2) Link to toastrCtrl.js
 (3) Use toastr to display a toast for info, success, warning or error
 
 // Display an info toast with no title
@@ -34,7 +34,7 @@ toastr.info('Are you the 6 fingered man?')
         <file src="content\content\toastr.less" target="content\content\toastr.less" />
         <file src="content\content\toastr.min.css" target="content\content\toastr.min.css" />
         <file src="content\content\toastr.scss" target="content\content\toastr.scss" />
-        <file src="content\scripts\toastr.js" target="content\scripts\toastr.js" />
+        <file src="content\scripts\toastrCtrl.js" target="content\scripts\toastrCtrl.js" />
         <file src="content\scripts\toastr.min.js" target="content\scripts\toastr.min.js" />
         <file src="content\scripts\toastr.min.js.map" target="content\scripts\toastr.min.js.map" />
     </files>

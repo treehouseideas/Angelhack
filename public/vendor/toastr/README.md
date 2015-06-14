@@ -12,12 +12,12 @@
 Toastr is hosted at CDN JS
 
 #### Debug
-- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js)
-- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css)
+- [//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/js/toastrCtrl.js](//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/js/toastrCtrl.js)
+- [//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/css/toastr.css](//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/css/toastr.css)
 
 #### Minified
-- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js) 
-- [//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css](//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css)
+- [//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/js/toastr.min.js](//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/js/toastr.min.js)
+- [//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/css/toastr.min.css](//cdnjs.cloudflare.com/ajax/libs/toastrCtrl.js/latest/css/toastr.min.css)
 
 ## NuGet Gallery
 http://nuget.org/packages/toastr
@@ -46,7 +46,7 @@ For other API calls, see the [demo](http://codeseven.github.io/toastr/demo.html)
 
 1. Link to toastr.css `<link href="toastr.css" rel="stylesheet"/>`
 
-2. Link to toastr.js `<script src="toastr.js"></script>`
+2. Link to toastrCtrl.js `<script src="toastrCtrl.js"></script>`
 
 3. use toastr to display a toast for info, success, warning or error
 

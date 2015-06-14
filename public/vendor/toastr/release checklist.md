@@ -1,7 +1,7 @@
 Toastr Release Checklist
 
 1. Update Toastr Version
-	* toastr.js
+	* toastrCtrl.js
 	* bower.json (toastr-bower repo)
 	* package.json
 	* nuget versions and dependency versions

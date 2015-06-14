@@ -15,7 +15,7 @@
     <description>3 Easy Steps:
 
 1) Link to toastr.css  and toastr-responsive.css 
-2) Link to toastr.js 
+2) Link to toastrCtrl.js
 3) Use toastr to display a toast for info, success, warning or error
 
 // Display an info toast with no title
@@ -30,6 +30,6 @@ toastr.info('Are you the 6 fingered man?')
   <files>
     <file src="content\content\toastr-responsive.css" target="content\content\toastr-responsive.css" />
     <file src="content\content\toastr.css" target="content\content\toastr.css" />
-    <file src="content\scripts\toastr.js" target="content\scripts\toastr.js" />
+    <file src="content\scripts\toastrCtrl.js" target="content\scripts\toastrCtrl.js" />
   </files>
 </package>
