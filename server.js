@@ -8,8 +8,10 @@ var config = require('./server/config/config')[env];
 
 require('./server/config/express')(app, config);
 require('./server/config/routes')(app);
-//require('./server/config/clusterpoint')(app);
+var clusterpoint = require('./server/config/clusterpoint');
 
 
 app.listen(config.port);
 console.log('listening on port ' + config.port + '...');
+// test insert
+//clusterpoint.insert(1,'willy');
