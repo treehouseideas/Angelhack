@@ -1,0 +1,3 @@
+myApp.controller('myCtrl', function(){
+
+});

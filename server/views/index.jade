@@ -14,7 +14,13 @@ block main-content
                         a(href="/") About
                     li
                         a(href="/") Faqs
+                    li
+                        a(href="/mine") mine
+                    li
+                        a(href="/theirs") theirs
+
     section.content
+        div(ng-view)
 
     footer.container.text-center
         p &copy; 2015 Wheres my Shit

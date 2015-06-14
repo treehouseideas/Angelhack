@@ -2,7 +2,7 @@ module.exports = function(app){
 
 
     app.get('/partials/*', function(req,res){
-        res.render('../../public/app/' + req.params[0])
+        res.render('../../public/views/' + req.params[0])
     });
 
 
