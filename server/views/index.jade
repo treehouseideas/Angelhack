@@ -1,28 +1,29 @@
 extends ../includes/layout
 
 block main-content
-    .navbar.navbar-default.navbar-fixed-top
-        .navbar-collapse.collapse
-            .row
-                .container
-                    .col-xs-4.pull-right
-                        ul.nav.navbar-nav.hover-active.navbar-right
-                            li
-                                a(href="/") Dashboard
-                            li
-                                a(href="/") History
-                            li
-                                a(href="/") signup
-                            li
-                                a(href="/signup") Signup
-            .row
-                img.userpic
-                span.username(ng-controller='Username') {{username}}
-                .col-xs-3.pull-right
-                    img.navbarlogo(src="partials/../images/robodog.png")
+    div(ng-controller="signinCtrl")
+        div(ng-show="!loggedin")
+            div(ng-include="'partials/signin'")
+        div(ng-show="loggedin")
+            .navbar.navbar-default.navbar-fixed-top
+                .navbar-collapse.collapse
+                    .row
+                        .container
+                            .col-xs-6.pull-right
+                                ul.nav.navbar-nav.hover-active.navbar-right
+                                    li
+                                        a(href="/") Dashboard
+                                    li
+                                        a(href="/") History
+                    .row
+                        img.userpic.img-circle
+                        span.username Johnny Bravo
+                        .col-xs-3.pull-right
+                            img.navbarlogo(src="partials/../images/robodog.png")
 
     section.content
         div(ng-view)
 
     footer.container.text-center
-        p &copy; 2015 Wheres my Shit
+        hr
+        p &copy; 2015 treve

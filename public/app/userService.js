@@ -1,5 +1,6 @@
 myApp.factory('UserService', function($http, $location) {
     var apiKey = "8bea781f-3916-467d-a48f-c26e56627cb4";
+    var toke = {};
     return {
         createUser : function(email, password) {
             var apiAddUser = "https://api.idolondemand.com/1/api/sync/adduser/v1";
@@ -23,18 +24,18 @@ myApp.factory('UserService', function($http, $location) {
         authUser : function(email, password) {
             var apiAuthUser = "https://api.idolondemand.com/1/api/sync/authenticate/v1";
             $http.post(apiAuthUser, {
+                'mechanism': 'SIMPLE',
                 'store': 'users',
                 'user': email,
                 'password': password,
                 'apikey': apiKey
             }).
-                success(function (message, token) {
-                    console.log(message);
-                    return token;
+                success(function (message) {
+                    console.log(message.token);
+                    toke = message.token;
                 }).
                 error(function(message) {
                     console.log(message);
-                    $location.path('/partials/signup');
                     return messsage;
                 });
         },

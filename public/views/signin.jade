@@ -1,0 +1,39 @@
+.container(style="top: 0; left: 0; position: fixed; width: 100%; height: 100%; background-color: #00939d; z-index: 10;")
+    .container(style="width: 300px; margin:0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)")
+        div(ng-show="!toggle")
+            img.splash(src="/partials/../images/robodog.png")
+            form.form-horizontal(name="signinForm")
+                .form-group
+                    input.form-control(name="email" type="email" placeholder="Email" ng-model="email" required)
+                .form-group
+                    input.form-control(name="password" type="password" placeholder="Password" ng-model="password" required)
+                button.btn.btn-primary(ng-click="signin()") Submit
+                button.btn.btn-default(ng-click="toggle=!toggle") Sign Up
+    div(ng-show="toggle")
+        .container.signup
+            .col-md-2
+            .col-md-8.text-center
+                form.form-horizontal(name="signupForm")
+                    fieldset
+                        legend New User Information
+                        .form-group
+                            label.col-md-2.control-label(for="email") Email
+                            .col-md-10
+                                input.form-control( type="email", placeholder="Email", ng-model="email")
+                        .form-group
+                            label.col-md-2.control-label(for="password") Password
+                            .col-md-10
+                                input.form-control( type="password", placeholder="Password", ng-model="password", required)
+                        .form-group
+                            label.col-md-2.control-label(for="fname") First Name
+                            .col-md-10
+                                input.form-control(name="fname", type="text", placeholder="First Name", ng-model="fname", required)
+                        .form-group
+                            label.col-md-2.control-label(for="lname") Last Name
+                            .col-md-10
+                                input.form-control(name="lname", type="text", placeholder="Last Name", ng-model="lname", required)
+                        .form-group
+                            .col-md-10.col-md-offset-2
+                                .pull-right
+                                    button.btn.btn-primary(ng-click="signup()") Submit
+                                    a.btn.btn-default(ng-click="toggle=!toggle") Cancel

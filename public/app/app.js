@@ -7,7 +7,7 @@ myApp.config(function($routeProvider, $locationProvider) {
         .when("/", {templateUrl: '/partials/mystuff', controller: 'myCtrl'})
         .when('/history', {templateUrl: '/partials/history', controller: 'historyCtrl'})
         .when('/mine', {templateUrl: '/partials/mystuff', controller: 'myCtrl'})
-        .when('/signup', {templateUrl: '/partials/signup', controller: 'signupCtrl'})
+        .when('/signin', {templateUrl: '/partials/signin', controller: 'signinCtrl'})
 
 
 });

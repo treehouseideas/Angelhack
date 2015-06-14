@@ -19,17 +19,17 @@ exports.request = function(id) {
     });
 };
     //Search ordering params
-exports.search = function(searchterm, usercount) {
-    var search_req = new cps.SearchRequest(searchterm);
+exports.search = function() {
+    var search_req = new cps.SearchRequest(cps.Term(1, "id"));
     cpsConn.sendRequest(search_req, function (err, search_resp) {
-        if (err) return console.error(err); // Handle error
-        console.log(search_resp);
+        if (err) return console.log(err);
+        console.log(search_resp.results.document[0].name);
+        return search_resp;
     });
 };
 
 //insert
 exports.insert = function(listitem,res) {
-    listitem.id = Date.now();
     var insert_request = new cps.InsertRequest(listitem);
     cpsConn.sendRequest(insert_request, function (err, insert_response) {
         if (err) return console.error(err);

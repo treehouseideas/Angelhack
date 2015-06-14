@@ -9,5 +9,5 @@ myApp.factory('notifier', function(toastr){
             toastr.error(msg);
             console.log(msg);
         }
-    }
+}
 });

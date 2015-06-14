@@ -16,4 +16,11 @@
                         div.overlay
                             div(ng-class="{ 'redwrap' : item.notifications, 'wrapper' : !item.notifications}")
                             p {{item.item}}
-
+                            div
+                                p {{item.weeksout}}
+                                p(ng-show="item.notifications") {{item.notifications}} notifications
+                                img.img-circl(ng-src="item.borrowpic")
+                    .col-md-5.popupimg
+                        img(src="http://cdn.blessthisstuff.com/imagens/stuff/kriega-r20-backpack-2.jpg")
+                    .col-md-5.
+                        asd
