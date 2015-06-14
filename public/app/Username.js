@@ -1,3 +1,3 @@
-myApp.controller('homeCtrl', function(){
+myApp.controller('Username', function(){
 
 });
