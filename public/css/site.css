@@ -11,14 +11,14 @@ body {
   padding-top: 70px;
 }
 .navbarlogo {
-  position: relative;
-  width: 300px;
-  padding-right: 20px;
+  width: 250px;
+  padding-right: 40px;
+  margin-top: -15px;
 }
 .username {
   position: fixed;
   margin-left: 260px;
-  margin-top: 80px;
+  margin-top: 25px;
   font-size: 3em;
   font-weight: 600;
   color: #fef7ca;
@@ -28,6 +28,7 @@ ul li a {
   color: #000 !important;
   font-size: 1.5em;
   font-weight: bold;
+margin-right
 }
 .userpic {
   position: fixed;
@@ -35,14 +36,57 @@ ul li a {
   width: 150px;
   height: 150px;
   margin-left: 70px;
-  margin-top: 90px;
+  margin-top: 33px;
 }
 .stuff {
-  margin-top: 200px;
+  margin-top: 120px;
 }
 .leftbar {
   margin-top: 100px;
 }
 .searchbar {
-  width: 100%;
+  width: 60%;
+  border-radius: 10px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+}
+div.togglebuttons button {
+  width: 50%;
+}
+.griditem {
+  background: no-repeat center center;
+  background-size: cover;
+  width: 204.25px;
+  height: 204.25px;
+  z-index: -1;
+}
+.wrapper {
+  background-color: #060;
+  position: relative;
+  z-index: 2;
+  width: 204.25px;
+  height: 204.25px;
+  opacity: 0.2;
+}
+.redwrap {
+  background-color: #b00900;
+  position: relative;
+  z-index: 2;
+  width: 204.25px;
+  height: 204.25px;
+  opacity: 0.2;
+}
+.overlay {
+  z-index: 0;
+  width: 204.25px;
+  height: 204.25px;
+}
+.overlay p {
+  color: #fef7ca;
+  display: inline;
+  position: relative;
+  top: -204.25px;
+}
+.nopad {
+  padding: 1px;
 }

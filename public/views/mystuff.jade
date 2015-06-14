@@ -1,1 +1,19 @@
-h1 mine
+.container.stuff
+    .col-xs-2.leftbar selector stuff
+    .col-xs-9
+        .row
+            .col-xs-4
+            .col-xs-4.togglebuttons
+                button.btn.disabled(ng-click"mine()") mystuff
+                button.btn.active(ng-click="theirs()") theirstuff
+        .row.text-center
+            .col-xs-8-offset-2
+                input.searchbar(placeholder=" Search" ng-model="search")
+        .row
+            .container-fluid.text-center
+                .col-xs-3.nopad(ng-repeat="item in items | filter:search")
+                    div.griditem(ng-style="{'background-image':'url(http://cdn.blessthisstuff.com/imagens/stuff/kriega-r20-backpack-2.jpg)'}")
+                        div.overlay
+                            div(ng-class="{ 'redwrap' : item.notifications, 'wrapper' : !item.notifications}")
+                            p {{item.item}}
+

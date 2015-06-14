@@ -13,24 +13,24 @@ console.log('clusterpoint connected');
 //req retrieve
 exports.request = function(id) {
     var retr_req = new cps.RetrieveRequest(id);
-    conn.sendRequest(retr_req, function (err, retr_resp) {
+    cpsConn.sendRequest(retr_req, function (err, retr_resp) {
         if (err) return console.error(err); // Handle error
         console.log(retr_resp);
     });
 };
     //Search ordering params
-exports.search = function(searchterm, usercount, ascendordescend) {
+exports.search = function(searchterm, usercount) {
     var search_req = new cps.SearchRequest(searchterm);
-    search_req.setOrdering([cps.NumericOrdering(usercount, ascendordescne), cps.RelevanceOrdering()]);
-    conn.sendRequest(search_req, function (err, search_resp) {
+    cpsConn.sendRequest(search_req, function (err, search_resp) {
         if (err) return console.error(err); // Handle error
         console.log(search_resp);
     });
 };
 
 //insert
-exports.insert = function(req,res) {
-    var insert_request = new cps.InsertRequest('<document><id>' + req.params.name + '</id>' + cps.Term(req.params.fname + req.params.lname, "name") + '</document>');
+exports.insert = function(listitem,res) {
+    listitem.id = Date.now();
+    var insert_request = new cps.InsertRequest(listitem);
     cpsConn.sendRequest(insert_request, function (err, insert_response) {
         if (err) return console.error(err);
         console.log('New user registered: ' + insert_response.document.id);
@@ -44,4 +44,14 @@ exports.update = function() {
     cpsConn.sendRequest(update_request, function (err, update_response) {
         if (err) return console.error(err);
     });
+};
+
+exports.retrieve = function() {
+    var retrieve_req = new cps.RetrieveRequest('1434268315411');
+    cpsConn.sendRequest(retrieve_req, function (err, retrieve_resp) {
+        if (err) return console.log(err);
+        if (retrieve_resp) {
+            console.log(retrieve_resp.results.document[0].listitem);
+        }
+    }, 'json');
 };
