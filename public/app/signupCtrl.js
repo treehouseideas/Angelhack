@@ -1,11 +1,7 @@
-myApp.controller("signupCtrl", function($scope, notifier, $location){
+myApp.controller("signupCtrl", function($scope, notifier, $location, UserService){
 
     $scope.signup = function(){
-        console.log('$scope.password');
-    //    UserService.createUser($scope.email,$scope.password).then(function(){
-    //
-    //        mvNotifier.notifysuccess('User account created!');
-
+        UserService.createUser($scope.email,$scope.password)
     };
 
 });
